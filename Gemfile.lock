@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    forecast (0.1.0)
+    open_weather_sdk (0.1.0)
       openweather2
 
 GEM
@@ -55,7 +55,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  forecast!
+  open_weather_sdk!
   rake (~> 13.0)
   rspec
   rspec-core
