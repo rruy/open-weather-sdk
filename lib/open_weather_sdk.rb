@@ -1,0 +1,3 @@
+class OpenWeatherSdk
+    
+end
