@@ -1,6 +1,7 @@
+require 'forecast'
 
 class OpenWeatherSdk
   def self.call(city)
-    Forecast.new(city).call
+    Forecast.call(city)
   end
 end
