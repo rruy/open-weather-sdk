@@ -30,8 +30,13 @@ class Forecast
       config.endpoint = 'http://api.openweathermap.org/data/2.5/weather'
       config.apikey = '3b839e5f779bb4cc9605b08f05253905'
     end
-    
-    Openweather2.get_weather(city: "#{city},BR", units: 'imperial')
+
+    begin
+      response = Openweather2.get_weather(city: city, units: 'imperial')
+      puts response.inspect
+    rescue Openweather2::UnknownResponse => e
+      puts "Error: #{e.message}"
+    end
   end
 
   def fill(data)
