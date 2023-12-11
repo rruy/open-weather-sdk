@@ -1,4 +1,3 @@
-require 'byebug'
 
 class Forecast
   attr_reader :city
