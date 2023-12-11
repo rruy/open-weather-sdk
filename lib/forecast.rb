@@ -1,3 +1,4 @@
+require "openweather2"
 
 class Forecast
   attr_reader :city
