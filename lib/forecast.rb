@@ -16,7 +16,7 @@ class Forecast
     city ||= default_city
     weather_data = fetch_weather_data(city)
 
-    OpenStruct.new(fill(weather_data))
+    OpenStruct.new(fill(weather_data)) unless weather.nil?
   end
 
   private
@@ -32,10 +32,9 @@ class Forecast
     end
 
     begin
-      response = Openweather2.get_weather(city: city, units: 'imperial')
-      puts response.inspect
+      Openweather2.get_weather(city: city, units: 'imperial')
     rescue Openweather2::UnknownResponse => e
-      puts "Error: #{e.message}"
+      nil
     end
   end
 
