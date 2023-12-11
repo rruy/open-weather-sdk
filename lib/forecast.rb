@@ -16,7 +16,7 @@ class Forecast
     city ||= default_city
     weather_data = fetch_weather_data(city)
 
-    OpenStruct.new(fill(weather_data)) unless weather.nil?
+    OpenStruct.new(fill(weather_data)) unless weather_data.nil?
   end
 
   private
@@ -27,6 +27,8 @@ class Forecast
 
   def fetch_weather_data(city)
     Openweather2.configure do |config|
+
+
       config.endpoint = 'http://api.openweathermap.org/data/2.5/weather'
       config.apikey = '3b839e5f779bb4cc9605b08f05253905'
     end
