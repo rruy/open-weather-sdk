@@ -1,7 +1,7 @@
 require "openweather2"
 
 class Forecast
-  attr_reader :city
+  attr_reader :city, :open_weather_client
   DEFAULT_CITY = 'São Paulo'.freeze
 
   def initialize(city)
@@ -26,6 +26,11 @@ class Forecast
   end
 
   def fetch_weather_data(city)
+    Openweather2.configure do |config|
+      config.endpoint = 'http://api.openweathermap.org/data/2.5/weather'
+      config.apikey = '3b839e5f779bb4cc9605b08f05253905'
+    end
+    
     Openweather2.get_weather(city: "#{city},BR", units: 'imperial')
   end
 
