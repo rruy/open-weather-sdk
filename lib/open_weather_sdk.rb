@@ -1,6 +1,6 @@
 
 class OpenWeatherSdk
-  def self.say_hello
-    puts "Hello, Gem!"
+  def self.call(city)
+    Forecast.new(city).call
   end
 end
