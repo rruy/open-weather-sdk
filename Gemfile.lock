@@ -3,6 +3,7 @@ PATH
   specs:
     open_weather_sdk (0.1.0)
       openweather2
+      rspec-json_expectations
 
 GEM
   remote: https://rubygems.org/
@@ -31,6 +32,7 @@ GEM
     rspec-expectations (3.12.3)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
+    rspec-json_expectations (2.2.0)
     rspec-mocks (3.12.6)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)

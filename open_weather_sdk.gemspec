@@ -20,6 +20,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency "openweather2"
+  spec.add_runtime_dependency "rspec-json_expectations"
 
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "rspec-core"
