@@ -1,4 +1,4 @@
-require 'forecast'
+require 'weather_service'
 
 class OpenWeatherSdk
   def self.call(api, city)
