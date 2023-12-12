@@ -1,4 +1,4 @@
-module OpenWeatherSdk
+module OpenWeather
   class ForecastDataFormatter
     attr_reader :weather_data
 

@@ -1,6 +1,6 @@
 require 'date'
 
-module OpenWeatherSdk
+module OpenWeather
   class WeatherMessageBuilder
     def initialize(temperature, conditions, city, date, forecast)
       @temperature = temperature
