@@ -53,4 +53,22 @@ RSpec.describe WeatherMessageBuilder do
       expect(result).to eq(expected_parsed_date)
     end
   end
+
+  describe '#build_message' do
+    it 'builds a weather message' do
+      forecast_data = [
+        { temperature: 32, date: '13/12/2023' },
+        { temperature: 25, date: '14/12/2023' },
+        { temperature: 29, date: '15/12/2023' },
+        { temperature: 33, date: '16/12/2023' },
+        { temperature: 28, date: '16/12/2023' }
+      ]
+
+      builder = WeatherMessageBuilder.new(34, 40, 'São Paulo', '12/12/2023', forecast_data)
+      message = builder.build_message
+
+      expected_message = '34°C e Sol em São Paulo em 12/12. Média para os próximos dias: 32°C em 13/12, 25°C em 14/12, 29°C em 15/12, 33°C em 16/12, 28°C em 16/12.'
+      expect(message).to eq(expected_message)
+    end
+  end
 end
