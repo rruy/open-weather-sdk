@@ -1,4 +1,7 @@
-module OpenWeatherSdk
+require_relative 'weather_forecast'
+require_relative 'weather_message_builder'
+
+module OpenWeather
   class WeatherService
     attr_reader :api_key
 

@@ -1,7 +1,10 @@
 require 'openweather2'
 require 'net/http'
 
-module OpenWeatherSdk
+require_relative 'weather_fetcher'
+require_relative 'forecast_data_formatter'
+
+module OpenWeather
   class Weather
     attr_reader :api_key, :city
 
@@ -29,4 +32,3 @@ module OpenWeatherSdk
       'São Paulo'
     end
   end
-end

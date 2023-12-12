@@ -1,4 +1,6 @@
-module OpenWeatherSdk
+require 'openweather2'
+
+module OpenWeather
   class WeatherFetcher
     attr_reader :api_key
 

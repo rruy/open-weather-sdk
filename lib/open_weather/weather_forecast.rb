@@ -2,7 +2,7 @@ require 'net/http'
 require 'json'
 require 'date'
 
-module OpenWeatherSdk
+module OpenWeather
   class WeatherForecast
     attr_reader :api_key
 
