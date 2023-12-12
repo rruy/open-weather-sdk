@@ -1,7 +1,7 @@
 require 'forecast'
 
 class OpenWeatherSdk
-  def self.call(city)
-    Forecast.call(city)
+  def self.call(api, city)
+    WeatherService.new(api, city).call
   end
 end
