@@ -1,10 +1,9 @@
 require 'rspec'
 require 'rspec/json_expectations' 
 require 'openweather2'
-require_relative '../lib/weather_fetcher'
-require 'byebug'
+require_relative '../../lib/open_weather/weather_fetcher'
 
-RSpec.describe WeatherFetcher do
+RSpec.describe OpenWeather::WeatherFetcher do
   let(:api_key) { '3b839e5f779bb4cc9605b08f05253905' } 
 
   subject { described_class.new(api_key) }

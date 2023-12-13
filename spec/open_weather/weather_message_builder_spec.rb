@@ -1,8 +1,8 @@
 # spec/weather_message_builder_spec.rb
 
-require_relative '../lib/weather_message_builder'
+require_relative '../../lib/open_weather/weather_message_builder'
 
-RSpec.describe WeatherMessageBuilder do
+RSpec.describe OpenWeather::WeatherMessageBuilder do
   let(:temperature) { 25 }
   let(:conditions) { 40 } # assuming 40 as an example conditions value
   let(:city) { 'TestCity' }
@@ -64,7 +64,7 @@ RSpec.describe WeatherMessageBuilder do
         { temperature: 28, date: '16/12/2023' }
       ]
 
-      builder = WeatherMessageBuilder.new(34, 40, 'São Paulo', '12/12/2023', forecast_data)
+      builder = OpenWeather::WeatherMessageBuilder.new(34, 40, 'São Paulo', '12/12/2023', forecast_data)
       message = builder.build_message
 
       expected_message = '34°C e Sol em São Paulo em 12/12. Média para os próximos dias: 32°C em 13/12, 25°C em 14/12, 29°C em 15/12, 33°C em 16/12, 28°C em 16/12.'

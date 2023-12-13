@@ -32,3 +32,4 @@ module OpenWeather
       'São Paulo'
     end
   end
+end

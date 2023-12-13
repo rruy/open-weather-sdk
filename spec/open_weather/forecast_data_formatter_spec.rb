@@ -1,7 +1,7 @@
 require 'rspec'
-require_relative '../lib/forecast_data_formatter'
+require_relative '../../lib/open_weather/forecast_data_formatter'
 
-RSpec.describe ForecastDataFormatter do
+RSpec.describe OpenWeather::ForecastDataFormatter do
   let(:weather_data) do
     double(
       'WeatherData',

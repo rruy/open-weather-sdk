@@ -1,3 +1,4 @@
+require_relative 'weather'
 require_relative 'weather_forecast'
 require_relative 'weather_message_builder'
 

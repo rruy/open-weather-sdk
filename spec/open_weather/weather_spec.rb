@@ -1,9 +1,9 @@
 require 'rspec'
-require_relative '../lib/weather'
-require_relative '../lib/weather_fetcher'
-require_relative '../lib/forecast_data_formatter'
+require_relative '../../lib/open_weather/weather'
+require_relative '../../lib/open_weather/weather_fetcher'
+require_relative '../../lib/open_weather/forecast_data_formatter'
 
-RSpec.describe Weather do
+RSpec.describe OpenWeather::Weather do
   let(:api_key) { 'your_api_key' }
   let(:city) { 'São Paulo' }
 
@@ -29,8 +29,8 @@ RSpec.describe Weather do
       end
 
       before do
-        allow(WeatherFetcher).to receive(:new).and_return(double('WeatherFetcher', fetch_weather_data: weather_data))
-        allow(ForecastDataFormatter).to receive(:new).and_return(double('ForecastDataFormatter', formatted_data: {}))
+        allow(OpenWeather::WeatherFetcher).to receive(:new).and_return(double('OpenWeather::WeatherFetcher', fetch_weather_data: weather_data))
+        allow(OpenWeather::ForecastDataFormatter).to receive(:new).and_return(double('OpenWeather::ForecastDataFormatter', formatted_data: {}))
       end
 
       it 'returns formatted weather data' do
@@ -42,7 +42,7 @@ RSpec.describe Weather do
 
     context 'with invalid data' do
       before do
-        allow(WeatherFetcher).to receive(:new).and_return(double('WeatherFetcher', fetch_weather_data: nil))
+        allow(OpenWeather::WeatherFetcher).to receive(:new).and_return(double('OpenWeather::WeatherFetcher', fetch_weather_data: nil))
       end
 
       it 'returns nil' do

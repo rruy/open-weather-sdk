@@ -1,7 +1,7 @@
 require 'rspec'
-require_relative '../lib/weather_forecast'
+require_relative '../../lib/open_weather/weather_forecast'
 
-RSpec.describe WeatherForecast do
+RSpec.describe OpenWeather::WeatherForecast do
   let(:api_key) { 'your_api_key' }
 
   subject { described_class.new(api_key) }
